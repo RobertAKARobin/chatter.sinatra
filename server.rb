@@ -1,3 +1,5 @@
 require "sinatra"
 
-puts "Hello, world!"
+get "/" do
+	"Hello, world!"
+end
