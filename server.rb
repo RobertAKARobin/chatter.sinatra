@@ -1,6 +1,11 @@
 require "sinatra"
 require "sinatra/reloader"
+require "json"
 
 get "/" do
-	"Hello, world!"
+	[
+		"Alligators all around",
+		"Bursting balloons",
+		"Catching colds",
+	].to_json
 end
