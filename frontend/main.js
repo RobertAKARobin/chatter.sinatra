@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', function(){
-	var convos = [
-		'Alligators all around',
-		'Bursting balloons',
-		'Catching colds',
-	]
+	var convos = [];
 	var convoList = document.getElementById('convoList');
 	var newConvo;
 	m.mount(convoList, {
+		oninit: function(){
+			m.request('http://localhost:4567').then(function(response){
+				convos = response;
+			});
+		},
 		view: function(){
 			return [
 				m('p', 'There are ' + convos.length + ' conversations:'),
