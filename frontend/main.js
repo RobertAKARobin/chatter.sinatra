@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function(){
-	console.log('This is in main.js!');
-	document.getElementById('title').style.color = 'red';
+	var convos = [
+		'Alligators all around',
+		'Bursting balloons',
+		'Catching colds',
+	]
+	var convoList = document.getElementById('convoList');
+	for(var i = 0, l = convos.length; i < l; i++){
+		convoList.innerHTML += '<li>' + convos[i] + '</li>';
+	}
 });
