@@ -1,0 +1,22 @@
+{
+  "name": "chatter.sinatra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobertAKARobin/chatter.sinatra.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobertAKARobin/chatter.sinatra/issues"
+  },
+  "homepage": "https://github.com/RobertAKARobin/chatter.sinatra#readme",
+  "dependencies": {
+    "mithril": "^1.1.1"
+  }
+}
