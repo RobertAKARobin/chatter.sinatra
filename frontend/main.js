@@ -5,7 +5,11 @@ document.addEventListener('DOMContentLoaded', function(){
 		'Catching colds',
 	]
 	var convoList = document.getElementById('convoList');
-	for(var i = 0, l = convos.length; i < l; i++){
-		convoList.innerHTML += '<li>' + convos[i] + '</li>';
-	}
+	m.mount(convoList, {
+		view: function(){
+			return convos.map(function(convo){
+				return m('li', convo);
+			});
+		}
+	});
 });
