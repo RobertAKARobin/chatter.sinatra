@@ -9,21 +9,24 @@ document.addEventListener('DOMContentLoaded', function(){
 	m.mount(convoList, {
 		view: function(){
 			return [
-				convos.map(function(convo){
-					return m('li', convo);
-				}),
-				m('li', [
-					m('input', {
-						placeholder: 'New convo',
-						oninput: function(event){
-							newConvo = event.target.value;
-						}
+				m('p', 'There are ' + convos.length + ' conversations:'),
+				m('ul', [
+					convos.map(function(convo, index){
+						return m('li', (index + 1) + '. ' + convo);
 					}),
-					m('button', {
-						onclick: function(event){
-							convos.push(newConvo);
-						}
-					}, 'Add new convo')
+					m('li', [
+						m('input', {
+							placeholder: 'New convo',
+							oninput: function(event){
+								newConvo = event.target.value;
+							}
+						}),
+						m('button', {
+							onclick: function(event){
+								convos.push(newConvo);
+							}
+						}, 'Add new convo')
+					])
 				])
 			]
 		}
